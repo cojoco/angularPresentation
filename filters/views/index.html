@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+  <h1>Formatting 500 to currency</h1>
+
+  <p>{{ 500 | currency }}</p>
+
+	<h1>Order items by price</h1>
+
+  <p ng-repeat="item in items | orderBy:'price'">{{item.name}} : {{item.price | currency}}</p>
+
+	<h1>Now do it in reverse!</h1>
+
+	<p ng-repeat="item in items | orderBy:'price':true">{{item.name}} : {{item.price | currency}}</p>
+
+  <h1>Custom stagger case filter</h1>
+
+  <p ng-repeat="item in items">{{item.name | staggerCase}} : {{item.price | currency}}</p>
+
+<script src="../app/app.js"></script>
+<script src="../app/controllers/myController.js"></script>
+</body>
+</html>

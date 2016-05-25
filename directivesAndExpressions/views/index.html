@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<body>
+
+  <div data-ng-app="myApp" data-ng-controller="myCtrl">
+
+    <h2>Cost Calculator</h2>
+
+    Quantity: <input type="number" ng-model="quantity">
+    Price: <input type="number" ng-model="price">
+
+    <p><b>Total in dollar:</b> {{quantity * price}}</p>
+
+    <h3>Items for sale</h3>
+    <div ng-repeat="item in items">
+      <p>{{ item.name }} : {{ item.price | currency }}</p>
+    </div>
+
+    <button custom-directive>Custom Directive Button</button>
+  </div>
+
+<script src="../app/app.js"></script>
+<script src="../app/controllers/myController.js"></script>
+<script src="../app/directives/customDirective.js"></script>
+</body>
+</html>

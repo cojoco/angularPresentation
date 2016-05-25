@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<body ng-controller="myCtrl">
+
+  <p ng-bind="name"></p>
+
+  <p>{{name}}</p>
+
+  <input ng-model="name" placeholder="Enter a name"></name>
+
+  <button ng-click="resetName()">Reset Name</button>
+
+<script src="../app/app.js"></script>
+<script src="../app/controllers/myController.js"></script>
+</body>
+</html>

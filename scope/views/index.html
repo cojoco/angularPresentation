@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<body>
+
+  <p>rootScope's name is {{name}}</p>
+
+  <input ng-model="name" placeholder="rootScope's name"></input>
+
+  <div ng-controller="myCtrl">
+    <p>myCtrl's name is {{name}}</p>
+    <input ng-model="name" placeholder="myCtrl's name"></input>
+  </div>
+
+<script src="../app/app.js"></script>
+<script src="../app/controllers/myController.js"></script>
+</body>
+</html>
+

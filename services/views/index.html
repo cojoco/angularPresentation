@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+	<p>Update delayed by 2 seconds using built-in $timeout service: {{delayedBool}}</p>
+
+	<button ng-click="changeBool()">Change bool</button>
+
+	<p>Number turned into hex by custom service: {{num}}</p>
+
+	<button ng-click="hexNumber()">Hex number</button>
+
+<script src="../app/app.js"></script>
+<script src="../app/controllers/myController.js"></script>
+<script src="../app/services/hexService.js"></script>
+</body>
+</html>
